@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slide{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+
+.mode{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    transform: translate(0, -100%);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.mode .zone{
+    width: 50%;
+    height: 30vh;
+    background-color: blanchedalmond;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.game-zone{
+    height: 300px;
+    width: 300px;
+    border: 1px solid black;
+    background-color: brown;
+    /* background-image: url('https://picsum.photos/300/300');
+    background-size: 300px 300px; */
+    display: grid;
+}
+
+.tile{
+    width: 100%;
+    height: 100%;
+    background-image: url('https://picsum.photos/300/300');
+    background-size: 300px 300px; /* même taille que le conteneur */
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+.tile.empty{
+    background: none;
+    border: none;
+}
