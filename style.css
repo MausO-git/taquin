@@ -51,10 +51,11 @@
 .tile{
     width: 100%;
     height: 100%;
-    background-image: url('https://picsum.photos/300/300');
+    background-image: url(images/apple3.jpg);
     background-size: 300px 300px; /* même taille que le conteneur */
     box-sizing: border-box;
     border: 1px solid #ccc;
+
 }
 
 .tile.empty{
