@@ -21,7 +21,7 @@ buttons.forEach(button =>{
         };
 
         const shuffle = (moves)=>{
-            let emptyIndex = board.indexOf(16);
+            let emptyIndex = board.indexOf(nb ** 2);
 
             for(let i=0; i<moves; i++){
                 const x = emptyIndex % nb;
@@ -100,7 +100,10 @@ buttons.forEach(button =>{
 
             [board[clickedIndex], board[emptyIndex]] = [board[emptyIndex], board[clickedIndex]];
 
-            const solved = board.every((val, index) => val === index+1);
+
+            const solved = tiles.every((tile, index)=>{
+                return parseInt(tile.dataset.index, 10) === index+1;
+            })
 
             if(solved){
                 alert("victoire")
@@ -119,21 +122,3 @@ buttons.forEach(button =>{
         mode.style.transform = 'translate(0,-100%)';
     })
 })
-
-// x3.addEventListener('click', ()=>{
-//     mode.style.transform = 'translate(0,-100%)';
-//     nb = 3;
-//     gameZone.style.gridTemplateColumns = `repeat(${nb}, 1fr)`;
-//     gameZone.style.gridTemplateRows = `repeat(${nb}, 1fr)`;
-//     for(let i = 0; i<(nb ** 2); i++){
-//         const tile = document.createElement('div');
-//         tile.classList.add('tile');
-//         tile.dataset('index', i+1);
-//         gameZone.appendChild(tile)
-//     }
-// })
-
-// x4.addEventListener('click', ()=>{
-//     mode.style.transform = 'translate(0,-100%)';
-//     nb = 4;
-// })
