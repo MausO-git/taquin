@@ -271,6 +271,7 @@ body{
 
     .repZone{
         top: 84%;
+        gap: 10px;
     }
 }
 
