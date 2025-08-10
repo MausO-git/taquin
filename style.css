@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+:root{
+    --tai: 300px;
+}
+
 body{
     background-color: #fefae0;
     color: black;
@@ -65,8 +69,8 @@ body{
 }
 
 .soluce{
-    height: 300px;
-    width: 300px;
+    height: var(--tai);
+    width: var(--tai);
     border: 1px solid black;
     background-image: url(images/apple3.jpg);
 }
@@ -88,8 +92,8 @@ body{
 }
 
 .game-zone{
-    height: 300px;
-    width: 300px;
+    height: var(--tai);
+    width: var(--tai);
     border: 4px solid #8B5A2B;
     background-color: #C19A6B;
     background-image: url(images/wood.jpg);
@@ -101,7 +105,7 @@ body{
     width: 100%;
     height: 100%;
     background-image: url(images/apple3.jpg);
-    background-size: 300px 300px; /* même taille que le conteneur */
+    background-size: var(--tai) var(--tai); /* même taille que le conteneur */
     box-sizing: border-box;
     border: 1px solid #ccc;
 
@@ -135,6 +139,7 @@ body{
 .best .btime, .best .btime2{
     display: inline;
 }
+
 
 .abs{
     position: absolute;
@@ -208,4 +213,69 @@ body{
 #mute svg{
     width: 80%;
     height: 80%;
+}
+
+@media all and (max-width: 1270px){
+    .best, #timer{
+        font-size: 20px;
+    }
+}
+
+@media all and (max-width: 1000px){
+    .best{
+        right: 50px;
+    }
+    #timer{
+        left: 50px;
+    }
+}
+
+@media all and (max-width: 800px){
+    .repZone{
+        top: 80%;
+    }
+}
+
+@media all and (max-width: 700px){
+    :root{
+        --tai: 250px;
+    }
+
+    .best{
+        right: 25px;
+    }
+    #timer{
+        left: 25px;
+    }
+
+    .best, #timer{
+        font-size: 18px;
+    }
+}
+
+@media all and (max-width: 600px){
+    :root{
+        --tai: 200px;
+    }
+}
+
+@media all and (max-width: 500px){
+    /* :root{
+        --tai: 175px;
+    } */
+
+    .slide{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .repZone{
+        top: 84%;
+    }
+}
+
+@media all and (max-width: 400px){
+    :root{
+        --tai: 175px;
+    }
 }
